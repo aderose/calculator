@@ -1,0 +1,90 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+body {
+  background-color: rgba(1, 1, 1, 0.05);
+}
+
+.container {
+  height: 400px;
+  margin: 10%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px rgba(1, 1, 1, 0.1);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+}
+
+#display {
+  grid-area: 1 / 1 / 2 / 5;
+  padding: 10px;
+  font-size: 2em;
+  color: rgba(0, 119, 255, 0.75);
+  display: flex;
+  align-items: center;
+
+}
+
+#add {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+#subtract {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+#multiply {
+  grid-area: 4 / 4 / 5 / 5;
+}
+
+#divide {
+  grid-area: 5 / 4 / 6 / 5;
+}
+
+#equals {
+  grid-area: 6 / 1 / 7 / 4;
+}
+
+#clear {
+  grid-area: 6 / 4 / 7 / 5;
+}
+
+#point {
+  grid-area: 5 / 2 / 6 / 4;
+}
+
+.input {
+  background-color: white;
+  box-shadow: 0 0 2px 1px rgba(1, 1, 1, 0.15);
+  border: none;
+  color: rgba(0, 119, 255, 0.75); 
+  font-size: 1.5em;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: rgba(0, 119, 255, 1);
+  box-shadow: 0 0 2px 1px rgba(1, 1, 1, 0.3);
+  cursor: pointer;
+}
+
+.input:focus {
+  outline: none;
+}
